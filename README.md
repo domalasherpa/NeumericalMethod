@@ -1,3 +1,3 @@
 # NeumericalMethod
 
-contains implementation of concepts studied in # Neumerical Method
+contains implementation of concepts studied in Neumerical Method
