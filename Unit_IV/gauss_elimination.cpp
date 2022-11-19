@@ -6,12 +6,16 @@
 using namespace std;
 
 void xchange(float (*a)[COL], float *b, int row){
+    float temp;
     for(int i = 0 ; i < COL; i++){
-        float temp = a[row][i];
+        temp = a[row][i];
         a[row][i] = a[row + 1][i];
         a[row + 1][i] = temp;
-
     }
+    temp = b[row];
+    b[row] = b[row + 1];
+    b[row + 1] = temp; 
+    
 }
 
 void gauss(float (*a)[COL], float *b){
