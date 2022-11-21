@@ -1,6 +1,4 @@
 //Write a program to calculate derivative from divided difference table 
-//inputs: 4 0 5 1 6 2 3 3 8 0
-//dy/dx = 7
 
 #include <iostream>
 #include <cmath>
@@ -8,14 +6,14 @@
 using namespace std;
 
 float ds(int n, float val, float x0, float h){
-    // foward difference
+    // central difference
     float dx = 0.0001, fx1 = 1, fx0 = 1, div = 1;
 
     if(n <= 0){
         return 0;
     }
 
-    //dy/dx = f(x + dx) - f(x) / dx;
+    //dy/dx = f(x + dx) - f(x - dx) / 2dx;
     for(int i = 0; i < n; i++){
         float s = (val - x0)/h;
         fx1 *= (s + dx) - i;
